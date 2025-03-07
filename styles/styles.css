@@ -1,0 +1,121 @@
+.container-main {
+    display: flex;
+    max-width: 1400px;
+    width: 100%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 50px;
+}
+.container-main-header-n-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+header {
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
+}
+ul {
+    display: flex;
+}
+li {
+    list-style-type: none;
+    height: 23px;
+    margin-right: 28px;
+}
+a {
+    font-family: "Source Sans 3", sans-serif; 
+    font-size: 16px;
+    line-height: 22.4px;
+    letter-spacing: 0px;
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: darkcyan;
+    cursor: crosshair;
+}
+h1 {
+    font-family: "Poppins", sans-serif; 
+    font-weight: medium;
+}
+p {
+    font-family: "Source Sans 3", sans-serif; 
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: 0px;
+}
+.div-img {
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+/*desktop*/
+@media screen and (min-width: 1001px) {
+    body {
+        background-color: #F1F3F5;
+    }
+    h1 {
+        font-size: 90px;
+        line-height: 102px;
+        letter-spacing: -2px;
+    }
+    .container-main {
+        justify-content: space-around;
+    }
+    .header-mobile {
+        display: none;
+    }
+    ul {
+        margin-right: 25px;
+    }
+}
+/*tablet*/
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+    body {
+        background-color: #FFFFFF;
+    }
+    h1 {
+        font-size: 72px;
+        line-height: 82.2px;
+        letter-spacing: -1.6px;
+    }
+    .container-main {
+        flex-direction: column;
+    }
+
+    .header-mobile, .svg-arrow {
+        display: none;
+    }    
+}
+/*mobile*/
+@media screen and (max-width: 800px) {
+    body {
+        background-color: #FFFFFF;
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 39.6px;
+        letter-spacing: -0.8px;
+    }
+    p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .container-main {
+        flex-direction: column;
+    }
+    .header-desktop-tablet, .svg-arrow {
+        display: none;
+    }
+}
