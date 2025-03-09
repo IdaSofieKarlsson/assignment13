@@ -13,30 +13,31 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-header {
-    display: flex;
-    justify-content: space-between;   
-    align-items: center;
+.topnav {
+    overflow: hidden;
 }
-ul {
-    display: flex;
+.topnav a {
+float: left;
+display: block;
+font-family: "Source Sans 3", sans-serif; 
+font-size: 16px;
+line-height: 22.4px;
+letter-spacing: 0px;
+color: black;
+text-decoration: none;
+text-align: center;
+padding: 14px 16px;
+
 }
-li {
-    list-style-type: none;
-    height: 23px;
-    margin-right: 28px;
+.topnav a:hover {
+color: darkcyan;
+cursor: crosshair;
 }
-a {
-    font-family: "Source Sans 3", sans-serif; 
-    font-size: 16px;
-    line-height: 22.4px;
-    letter-spacing: 0px;
-    color: black;
-    text-decoration: none;
+.topnav a.active {
+color: darkcyan;
 }
-a:hover {
-    color: darkcyan;
-    cursor: crosshair;
+.topnav .icon {
+display: none;
 }
 h1 {
     font-family: "Poppins", sans-serif; 
@@ -52,6 +53,7 @@ p {
     margin: auto;
     margin-top: 13px;
 }
+
 /*desktop*/
 @media screen and (min-width: 1001px) {
     h1 {
@@ -61,9 +63,6 @@ p {
     }
     .container-main {
         justify-content: space-around;
-    }
-    .header-mobile {
-        display: none;
     }
     ul {
         margin-right: 25px;
@@ -78,9 +77,12 @@ p {
     }
     .container-main {
         flex-direction: column;
+        max-width: 800px;
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
     }
-
-    .header-mobile, .svg-arrow {
+    .svg-arrow {
         display: none;
     }
     .main-h1-n-p {
@@ -100,11 +102,31 @@ p {
     }
     .container-main {
         flex-direction: column;
+        max-width: 320px;
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
     }
-    .header-desktop-tablet, .svg-arrow {
+    .svg-arrow {
         display: none;
     }
     .main-h1-n-p {
         justify-items: center;
+    }
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
     }
 }

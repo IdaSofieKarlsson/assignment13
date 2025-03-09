@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Recipes</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
 <body>
     <div class="container-main">
         <div class="container-main-header-n-txt">
-            <header class="header-desktop-tablet">
-                <div class="logo">
-                    <img src="images/Logo.svg" alt="Logotype" width="90px" height="36px">
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Works</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <header class="header-mobile">
-                <div class="logo">
-                    <img src="images/Logo.svg" alt="Logotype" width="90px" height="36px">
-                </div>
-                <img src="images/Icon2.svg" alt="icon for mobile nav" width="24px" height="24px">
+            <header class="topnav" id="myTopnav">
+                <a href="#home" class="active"><img class="logo" src="images/Logo.svg" alt="Logotype" width="90px" height="36px"></a>
+                <a href="#Works">Works</a>
+                <a href="#Services">Services</a>
+                <a href="#Contacts">Contacts</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
             </header>
             <div class="main-h1-n-p">
                 <h1 class="main-h1">Recipes</h1>
                 <p class="main-p">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcor.</p>
+                <img class="svg-arrow" src="images/Icon.svg" alt="Arrow" width="40px" height="16px">
             </div>
-            <img class="svg-arrow" src="images/Icon.svg" alt="Arrow" width="40px" height="16px">
-        </div>
-        <div class="div-img">
-            <picture>
-                <source media="(max-width: 800px)" srcset="images/Bitmap-mobile.png">
-                <source media="(max-width: 1000px)" srcset="images/Bitmap-tablet.png">
-                <source media="(min-width: 1001px)" srcset="images/Bitmap-desktop.png">
-                <img src="images/Bitmap-mobile.png" alt="Pumpkin Soup">
-            </picture>
+            <div class="div-img">
+                <picture>
+                    <source media="(max-width: 800px)" srcset="images/Bitmap-mobile.png">
+                    <source media="(max-width: 1000px)" srcset="images/Bitmap-tablet.png">
+                    <source media="(min-width: 1001px)" srcset="images/Bitmap-desktop.png">
+                    <img src="images/Bitmap-mobile.png" alt="Pumpkin Soup">
+                </picture>
 
+            </div>
         </div>
     </div>
+    <script>
+    <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
 </body>
 </html>
